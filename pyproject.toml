@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "mcp-amadeus"
 version = "0.1.0"
@@ -8,3 +12,9 @@ dependencies = [
     "amadeus>=12.0.0",
     "mcp[cli]>=1.6.0",
 ]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+mcp-amadeus = "mcp_amadeus.server:main"

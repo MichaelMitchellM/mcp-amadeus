@@ -131,5 +131,9 @@ def flight_search_prompt(origin: str, destination: str, date: str) -> str:
     departure/arrival times, and any layovers.
     """
 
-if __name__ == "__main__":
+def main():
+    """Entrypoint used by console script to run the MCP server."""
     mcp.run()
+
+if __name__ == "__main__":
+    main()
